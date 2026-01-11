@@ -63,12 +63,30 @@
     <label>vercel username and password</label>
     <input type="text">
     
-   <label>Domain Provider</label><br>
-<input 
-  type="text" 
-  name="domain_provider" 
-  style="width: 100%; height: 60px; font-size: 16px; padding: 10px;"
->
+    <label>Domain Provider</label><br>
+
+<textarea
+  name="domain_provider"
+  placeholder="Type here..."
+  oninput="autoGrow(this)"
+  style="
+    width: 100%;
+    min-height: 60px;
+    font-size: 16px;
+    padding: 10px;
+    line-height: 1.6;
+    resize: none;
+    overflow: hidden;
+  "
+></textarea>
+
+<script>
+function autoGrow(textarea) {
+  textarea.style.height = "auto";
+  textarea.style.height = textarea.scrollHeight + "px";
+}
+</script>
+
 
 
      <label>Domain name</label>
